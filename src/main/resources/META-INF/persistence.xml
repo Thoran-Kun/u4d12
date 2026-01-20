@@ -6,9 +6,11 @@
         <!-- Il nome della Persistence Unit è importante perché nel codice Java dovremo richiamarla per nome-->
 
         <!-- TODO: Aggiungi elenco delle entities -->
+        <!--  aggiuno la classe Evento per poter matchare il DB con Maven  -->
+              <class>org.example.entites.Evento</class>
 
         <properties>
-            <property name="jakarta.persistence.jdbc.url" value="jdbc:postgresql://localhost:5433/u4d12"/>
+            <property name="jakarta.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/u4d12"/>
             <!--  u4d12 è il nome del DB (se questo non è già stato creato in PgAdmin avrò un errore-->
             <property name="jakarta.persistence.jdbc.user" value="postgres"/>
             <property name="jakarta.persistence.jdbc.password" value="1234"/>
