@@ -8,6 +8,8 @@ import org.example.entites.Evento;
 import org.example.entites.TipoEvento;
 import org.example.exceptions.NotFoundException;
 
+import java.time.LocalDate;
+
 public class Application {
 private static final EntityManagerFactory entityManagerFactory =
         Persistence.createEntityManagerFactory("u4d12pu");
@@ -18,15 +20,16 @@ private static final EntityManagerFactory entityManagerFactory =
         EventoDAO ev = new EventoDAO(entityManager);
 
         //Qui creiamo appunto i nuovi eventi
-        Evento party = new Evento("party", "2001-01-01", "party privato", TipoEvento.PRIVATO);
-        Evento festaCapodanno = new Evento("Capodanno", "2022-12 -31", "festa di Capodanno", TipoEvento.PUBBLICO);
-        Evento 
+        Evento party = new Evento("party", LocalDate.of(2001,1,1), "party privato", TipoEvento.PRIVATO);
+        Evento festaCapodanno = new Evento("Capodanno", LocalDate.of(2022,12 ,31), "festa di Capodanno", TipoEvento.PUBBLICO);
+        Evento compleanno = new Evento("Compleanno", LocalDate.of(2020,1,3), "Festa Compleanno a sorpresa", TipoEvento.PRIVATO);
         //facciamo partire il commit per salvare i nostri eventi
         //----------------------------------- SAVE ------------------------------
         ev.save(party);
         ev.save(festaCapodanno);
+        ev.save(compleanno);
 
-        //--------------------------------- FIND BY ID ------------------------------
+        //--------------------------------- FIND BY ID ------------------------------ 
         try {
             Evento eventoFromDB = ev.findById(1);
             System.out.println(eventoFromDB);
