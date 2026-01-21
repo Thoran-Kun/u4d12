@@ -24,7 +24,7 @@ public class Persona {
     @Enumerated(EnumType.STRING)
     private Sesso sesso;
     //RELAZIONE, una persona può avere più partecipazioni
-    @OneToMany(mappedBy = "persona")
+    @OneToMany(mappedBy = "persona", cascade = CascadeType.REMOVE)
     private List<Partecipazioni> ListaPartecipazioni;
 
     public Persona(){}
