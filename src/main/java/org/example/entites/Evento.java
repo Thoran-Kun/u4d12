@@ -3,6 +3,7 @@ package org.example.entites;
 import jakarta.persistence.*;
 
 import java.time.LocalDate;
+import java.util.List;
 
 @Entity
 @Table(name = "eventi")
@@ -27,6 +28,12 @@ public class Evento {
     @Column(name = "numeroPartecipanti")
     private int numeroPartecipanti;
 
+    @ManyToOne
+    @JoinColumn(name = "location_id", nullable = false)
+    private Location location;
+
+    @OneToMany(mappedBy = "evento")
+    private List<Partecipazioni> partecipazioni;
     //COSTRUTTORE VUOTO PER POTER PERMETTERE DI CREARE GLI OGGETTI
     public Evento(){}
 
@@ -37,6 +44,7 @@ public class Evento {
         this.descrizione = descrizione;
         this.tipoEvento = tipoEvento;
         this.numeroPartecipanti = numeroPartecipanti;
+        this.location = location;
     }
 
     //GETTER E SETTER
@@ -83,6 +91,22 @@ public class Evento {
 
     public void setNumeroPartecipanti(int numeroPartecipanti) {
         this.numeroPartecipanti = numeroPartecipanti;
+    }
+
+    public Location getLocation() {
+        return location;
+    }
+
+    public void setLocation(Location location) {
+        this.location = location;
+    }
+
+    public List<Partecipazioni> getPartecipazioni() {
+        return partecipazioni;
+    }
+
+    public void setPartecipazioni(List<Partecipazioni> partecipazioni) {
+        this.partecipazioni = partecipazioni;
     }
 
     @Override
