@@ -8,6 +8,9 @@
         <!-- TODO: Aggiungi elenco delle entities -->
         <!--  aggiuno la classe Evento per poter matchare il DB con Maven  -->
               <class>org.example.entites.Evento</class>
+              <class>org.example.entites.Persona</class>
+              <class>org.example.entites.Partecipazione</class>
+              <class>org.example.entites.Location</class>
 
         <properties>
             <property name="jakarta.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/u4d12"/>
