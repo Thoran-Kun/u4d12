@@ -20,16 +20,16 @@ private static final EntityManagerFactory entityManagerFactory =
         EventoDAO ev = new EventoDAO(entityManager);
 
         //Qui creiamo appunto i nuovi eventi
-        Evento party = new Evento("party", LocalDate.of(2001,1,1), "party privato", TipoEvento.PRIVATO);
-        Evento festaCapodanno = new Evento("Capodanno", LocalDate.of(2022,12 ,31), "festa di Capodanno", TipoEvento.PUBBLICO);
-        Evento compleanno = new Evento("Compleanno", LocalDate.of(2020,1,3), "Festa Compleanno a sorpresa", TipoEvento.PRIVATO);
+        Evento party = new Evento("party", LocalDate.of(2001,1,1), "party privato", TipoEvento.PRIVATO, 10);
+        Evento festaCapodanno = new Evento("Capodanno", LocalDate.of(2022,12 ,31), "festa di Capodanno", TipoEvento.PUBBLICO, 100);
+        Evento compleanno = new Evento("Compleanno", LocalDate.of(2020,1,3), "Festa Compleanno a sorpresa", TipoEvento.PRIVATO, 30);
         //facciamo partire il commit per salvare i nostri eventi
         //----------------------------------- SAVE ------------------------------
-        ev.save(party);
-        ev.save(festaCapodanno);
-        ev.save(compleanno);
+        //ev.save(party);
+        //ev.save(festaCapodanno);
+        //ev.save(compleanno);
 
-        //--------------------------------- FIND BY ID ------------------------------ 
+        //--------------------------------- FIND BY ID ------------------------------
         try {
             Evento eventoFromDB = ev.findById(1);
             System.out.println(eventoFromDB);

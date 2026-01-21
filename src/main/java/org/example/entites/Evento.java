@@ -23,16 +23,20 @@ public class Evento {
     @Column(name = "type", nullable = false)
     @Enumerated(EnumType.STRING)
     private TipoEvento tipoEvento;
+    //numero massimo Partecipanti
+    @Column(name = "numeroPartecipanti")
+    private int numeroPartecipanti;
 
     //COSTRUTTORE VUOTO PER POTER PERMETTERE DI CREARE GLI OGGETTI
     public Evento(){}
 
     //COSTRUTTORE VERO E PROPRIO
-    public Evento(String titolo, LocalDate dataEvento, String descrizione, TipoEvento tipoEvento){
+    public Evento(String titolo, LocalDate dataEvento, String descrizione, TipoEvento tipoEvento, int numeroPartecipanti){
         this.titolo = titolo;
         this.dataEvento = dataEvento;
         this.descrizione = descrizione;
         this.tipoEvento = tipoEvento;
+        this.numeroPartecipanti = numeroPartecipanti;
     }
 
     //GETTER E SETTER
@@ -73,6 +77,14 @@ public class Evento {
         this.tipoEvento = tipoEvento;
     }
 
+    public int getNumeroPartecipanti() {
+        return numeroPartecipanti;
+    }
+
+    public void setNumeroPartecipanti(int numeroPartecipanti) {
+        this.numeroPartecipanti = numeroPartecipanti;
+    }
+
     @Override
     public String toString() {
         return "Evento{" +
@@ -81,6 +93,7 @@ public class Evento {
                 ", dataEvento=" + dataEvento +
                 ", descrizione='" + descrizione + '\'' +
                 ", tipoEvento=" + tipoEvento +
+                ", numeroPartecipanti=" + numeroPartecipanti +
                 '}';
     }
 }
