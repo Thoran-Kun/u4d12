@@ -9,7 +9,7 @@
         <!--  aggiuno la classe Evento per poter matchare il DB con Maven  -->
               <class>org.example.entites.Evento</class>
               <class>org.example.entites.Persona</class>
-              <class>org.example.entites.Partecipazione</class>
+              <class>org.example.entites.Partecipazioni</class>
               <class>org.example.entites.Location</class>
 
         <properties>
