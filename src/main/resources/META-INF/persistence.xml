@@ -11,6 +11,10 @@
               <class>org.example.entites.Persona</class>
               <class>org.example.entites.Partecipazioni</class>
               <class>org.example.entites.Location</class>
+              <class>org.example.entites.PartitaDiCalcio</class>
+              <class>org.example.entites.Concerto</class>
+              <class>org.example.entites.GaraDiAtletica</class>
+
 
         <properties>
             <property name="jakarta.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/u4d12"/>
