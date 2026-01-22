@@ -8,7 +8,7 @@ import java.util.List;
 @Entity
 @Table(name = "eventi")
 @Inheritance(strategy = InheritanceType.JOINED)
-public class Evento {
+public abstract class Evento {
     @Id //OBBLIGATORIO. Corrisponderà alla pirma colonna delle PK
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;

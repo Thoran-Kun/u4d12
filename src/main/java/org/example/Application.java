@@ -40,23 +40,23 @@ private static final EntityManagerFactory entityManagerFactory =
         //creo una nuova Persona
         Persona user = new Persona("Salvatore", "Pepe", "miamail@ciao", LocalDate.of(1991,01,03), Sesso.MASCHIO);
         pd.save(user);
-        Evento concert = new Evento("Rock", LocalDate.now().plusMonths(2), "Amazing", TipoEvento.PUBBLICO, 500000);
+        //Evento concert = new Evento("Rock", LocalDate.now().plusMonths(2), "Amazing", TipoEvento.PUBBLICO, 500000);
         //creato il concerto setto la location tramite i set
-        concert.setLocation(milano);
+        //concert.setLocation(milano);
         //una volta creato tutto risalvo l'evento
-        ev.save(concert);
+        //ev.save(concert);
         //dopodichè setto la partecipazione
-        Partecipazioni partecipazione = new Partecipazioni(user, concert, StatoPartecipazione.CONFERMATO);
+        //Partecipazioni partecipazione = new Partecipazioni(user, concert, StatoPartecipazione.CONFERMATO);
        //ogni volta che creo qualcosa la devo sempre salvare
-        partd.save(partecipazione);
+        //partd.save(partecipazione);
 
         //--------------------------------- FIND BY ID ------------------------------
-        try {
-            Evento eventoFromDB = ev.findById(concert.getId());
-            System.out.println(eventoFromDB);
-        } catch (NotFoundException ex) {
-            System.out.println(ex.getMessage());
-        }
+//        try {
+//            Evento eventoFromDB = ev.findById(concert.getId());
+//            System.out.println(eventoFromDB);
+//        } catch (NotFoundException ex) {
+//            System.out.println(ex.getMessage());
+//        }
 
         //------------------------------- FIND BY ID AND DELETE -------------------------
 //        try{
