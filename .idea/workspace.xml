@@ -5,13 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b186bda7-e0a5-4a76-b450-9a7e519e31a8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/entites/Concerto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/entites/GaraDiAtletica.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/entites/Genere.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/entites/PartitaDiCalcio.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/entites/Evento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/entites/Evento.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
